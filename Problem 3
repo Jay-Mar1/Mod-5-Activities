@@ -1,0 +1,23 @@
+# Input parameters
+
+sds = input("How many sides in your polygon: ")
+lgt = input("How long would you like your sides: ")
+clr = input("What color would you like your lines(red, green, blue): ")
+fil = input("What color would you like your polygon(red, green, blue):")
+
+# Import the Turtle
+
+import turtle
+wn = turtle.Screen()
+ttl = turtle.Turtle()
+ttl.color(clr)
+ttl.fillcolor(fil)
+ttl.begin_fill()
+
+for i in range(int(sds)):
+    ttl.forward (int(lgt))
+    ttl.left (int(360) / int(sds))
+
+ttl.end_fill()
+
+wn.exitonclick()
