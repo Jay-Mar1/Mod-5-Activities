@@ -1,0 +1,66 @@
+#Import turtle
+
+import turtle            
+wn = turtle.Screen()
+alex = turtle.Turtle()
+alex.color("red")
+
+#Build the house
+alex.fillcolor("red")
+alex.begin_fill()
+for i in range(6):
+    alex.forward(100)
+    alex.left(90)
+alex.end_fill()
+
+#Build the roof
+alex.fillcolor("black")
+alex.color("black")
+alex.begin_fill()
+alex.right(45)
+alex.forward(70.71)
+alex.left(90)
+alex.forward(70.71)
+alex.end_fill()
+
+#Build windows
+alex.up()
+alex.right(225)
+alex.forward(20)
+alex.right(90)
+alex.forward(25)
+alex.down()
+alex.fillcolor("white")
+alex.begin_fill()
+for i in range(5):
+    alex.forward(20)
+    alex.left(90)
+alex.end_fill()
+alex.up()
+alex.forward(45)
+alex.down()
+alex.fillcolor("white")
+alex.begin_fill()
+for i in range(5):
+    alex.forward(20)
+    alex.left(90)
+alex.end_fill()
+
+#Build door
+alex.fillcolor("green")
+alex.up()
+alex.left(180)
+alex.forward(55)
+alex.right(90)
+alex.forward(40)
+alex.begin_fill()
+alex.down()
+alex.right(90)
+alex.forward(40)
+alex.left(90)
+alex.forward(25)
+alex.left(90)
+alex.forward(40)
+alex.end_fill()
+
+wn.exitonclick()
